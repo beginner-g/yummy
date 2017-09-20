@@ -1,0 +1,72 @@
+.profile-header{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 45px;
+  padding-bottom: 20px;
+}
+.profile-header p{
+  color: #fff;
+  line-height: 15px;
+}
+.profile{
+  display: flex;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.active{
+  display: none;
+}
+.avatar{
+  background-image: url('https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3884012340,3727116094&fm=27&gp=0.jpg');
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  outline: 0;
+  border: 0;
+  background-size: 150px;
+  background-position: center center;
+}
+.img-input{
+  width: 0;
+  height: 0;
+}
+.profile-username{
+  padding: 10px;
+  color: #fff;
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+.pro-username{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.pro-slogan{
+  font-size: 15px;
+}
+.pro-slogan .word{
+  border: 0px;
+  background-color: rgba(0,0,0,0);
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  font-size: 15px;
+  padding: 0;
+}
+.pro-slogan button{
+  color: #fff;
+  background: none;
+  border: 0;
+  outline: 0;
+}
+.write{
+  padding: 25px 10px;
+  box-sizing: border-box;
+}
+.pen{
+  cursor: pointer;
+}
+.profile-list{
+  min-height: 67px;
+  background-color: #F9FAFB;
+  box-sizing: border-box;
+}
