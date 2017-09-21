@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import './login.css'
-import list from './list.svg'
 import {Link} from 'react-router-dom'
+import Menu from '../Menu/Menu'
 class Login extends Component {
   render(){
     return(
       <div className="login-home">
+        <Menu/>
         <div className="login-header">
-          <img src={list} alt=""/>
           <p>登录</p>
         </div>
         <div className="login-title">
@@ -20,7 +20,7 @@ class Login extends Component {
             <input className='password' type="password" placeholder='password'/>
           </div>
           <div className="login-button">
-            <button className='submit'>登录</button>
+            <Link className='submit' to='/profile'>登录</Link>
           </div>
         </div>
         <div className="other">

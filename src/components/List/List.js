@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './list.css'
+import Toggle from 'react-toggle'
+import "react-toggle/style.css"
 class List extends Component {
   state={
     list:[
@@ -36,6 +38,12 @@ class List extends Component {
         <div className="list-avatar" style={{backgroundImage:`url(${t.avatar})`}}>
         </div>
         <a className='list-username' href="javascript:;">{t.username}</a>
+        <label>
+          <Toggle
+            defaultChecked={this.state.tofuIsReady}
+            icons={false}
+            onChange={this.handleTofuChange} />
+        </label>
       </li>
     ))
     return(

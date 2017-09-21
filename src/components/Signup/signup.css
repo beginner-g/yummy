@@ -1,54 +1,52 @@
-.login-home{
+.sign{
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 100%;
+  height: 100vh;
 }
-.login-header{
+.signup-header{
   display: flex;
   justify-content: center;
 }
-.login-header img{
+.signup-header img{
   position: absolute;
   left:-180px;
   width: 20px;
   top: 50px;
 }
-.login-header p{
+.signup-header>p{
   text-align: center;
   line-height: 15px;
   padding: 45px 0 20px 0;
   color: #fff;
 }
-.login-title{
+.signup-title{
   height: 140px;
-  margin-bottom: 80px;
 }
-.login-title h1{
+.signup-title h1{
   font-size: 36px;
   color: #fff;
   line-height: 42px;
   text-align: center;
   margin-top: 54px;
 }
-.login-title p{
+.signup-title p{
   font-size: 16px;
   margin-top: 10px;
   color: #fff;
   text-align: center;
 }
-.login-form{
+.signup-form{
   display: flex;
   flex-direction: column;
   margin: 30px auto;
-  flex-grow: 1;
   width: 280px;
 }
-.input{
+.signup-input{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 input{
   line-height: 16px;
@@ -59,7 +57,7 @@ input{
   outline: 0;
   text-indent: 20px;
 }
-.submit{
+.signup-submit{
   display: block;
   border: 0;
   line-height: 56px;
@@ -71,11 +69,11 @@ input{
   color: #F77062;
   outline: 0;
 }
-.other{
+.signup-other{
   display: flex;
   justify-content: center;
 }
-.other a{
+.signup-other a{
   color: #fff;
   line-height: 20px;
   text-decoration: none;

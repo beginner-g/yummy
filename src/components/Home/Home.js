@@ -11,7 +11,7 @@ class Home extends Component {
           <h1 className='title'>吮指</h1>
           <p>享受舌尖艳遇</p>
         </div>
-        <div className="active">
+        <div className="active1">
           <Link className='signup' to='/signup'>注册</Link>
           <Link className='login' to='/login'>登录</Link>
         </div>
