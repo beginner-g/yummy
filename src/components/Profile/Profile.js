@@ -3,7 +3,6 @@ import './profile.css'
 import pen from './pen.svg'
 import List from '../List/List'
 import Menu from '../Menu/Menu'
-import Upload from '../Upload/Upload'
 class Profile extends Component {
   state={
     val:'',
@@ -40,11 +39,10 @@ class Profile extends Component {
         <div className='profile'>
           <label className='avatar'>
             <input type='file' className='img-input'/>
-            <Upload />
           </label>
           <div className="profile-username">
             <div className="pro-username">
-              beginner
+              Beginner
             </div>
             <div className={`pro-slogan ${word&&'active'}`}>
               <input className='word' type="text" value={val} onChange={this.handleChange}/>

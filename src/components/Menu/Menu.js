@@ -26,6 +26,11 @@ class Menu extends Component {
       show:false
     })
   }
+  handleUser=()=>{
+    this.setState({
+      show:false
+    })
+  }
   render(){
     const {show} =this.state
     return(
@@ -36,7 +41,13 @@ class Menu extends Component {
         <div className='left-wrap' style={{marginLeft:show&&'0px'}}>
           <div className="left">
             <div className="left-item">
-              <div className="left-user">
+              <div className="avatar-user">
+                <div className="left-user">
+                </div>
+                <div className="user-login">
+                  <Link onClick={this.handleUser} className='user-name' to='/profile'>Beginner</Link>
+                  <Link to='/'>退出</Link>
+                </div>
               </div>
               <div className="left-list">
                 <Link className='list-button' to='/'>首页</Link>

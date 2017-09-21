@@ -41,6 +41,11 @@
   justify-content: space-between;
   height: 100%;
 }
+.avatar-user{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .left-user{
   background-image: url('https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3884012340,3727116094&fm=27&gp=0.jpg');
   width: 100px;
@@ -50,6 +55,23 @@
   display: block;
   background-size: 170px;
   background-position: center center;
+}
+.user-login{
+  display: block;
+  margin: 16px auto;
+}
+.user-login a{
+  padding-left: 5px;
+  font-size: 14px;
+  color: #F77062;
+  text-align: center;
+  line-height: 1;
+  text-decoration: none;
+}
+.user-name{
+  display: inline-block;
+  padding-right: 5px;
+  border-right: 2px solid #F77062;
 }
 .left-list{
   flex-grow: 2;
