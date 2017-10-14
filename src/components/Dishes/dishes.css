@@ -1,0 +1,93 @@
+.dishes{
+  box-sizing: border-box;
+  height: 100vh;
+}
+.title-header{
+  text-align: center;
+  padding-top: 45px;
+  color: #fff;
+  line-height: 15px;
+  padding-bottom: 20px;
+}
+.banner{
+  padding-bottom: 90px;
+}
+.dish-card-wrap{
+  margin: 0 auto;
+}
+.dish-card-wrap a{
+  text-decoration: none;
+}
+.dish-card{
+    background-color: #fff;
+    width: 92%;
+    margin: 0 auto;
+    height: 75vh;
+}
+.slick-dots{
+  bottom: -40px;
+}
+.slick-dots li.slick-active button:before{
+  opacity: 0.9;
+  color: #fff;
+}
+.slick-dots li button:before{
+  opacity: 0.4;
+  color: #fff;
+}
+.slick-track{
+  height: 75vh;
+}
+.dish-card-poster img{
+  display: block;
+  width: 210px;
+  height: 210px;
+  margin: 0 auto;
+}
+.dish-card-detail{
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.dish-title{
+  text-align: center;
+  font-size: 26px;
+  color: #F77062;
+  line-height: 32px;
+}
+.dish-price{
+  color: #878787;
+  text-align: center;
+}
+.dish-price span{
+  color: #F77062;
+}
+.dish-news{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /*flex-grow: 1;*/
+}
+.news-box{
+  width: 44px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 85px;
+}
+.news-box img{
+  display: block;
+  width: 30px;
+}
+.news-box span{
+  line-height: 30px;
+  color: #D0D0D0;
+}
+.dish-desc{
+  font-size: 14px;
+  color: #878787;
+  text-align: center;
+  line-height: 24px;
+}

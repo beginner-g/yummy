@@ -2,21 +2,38 @@ import React, { Component } from 'react'
 import './signup.css'
 import Menu from '../Menu/Menu'
 import {Link} from 'react-router-dom'
+import axios from 'axios'
+import store from '../../redux/store'
 class Signup extends Component {
   state={
-    user:''
+    val:'',
+    email: ''
   }
   changeUser=(e)=>{
     this.setState({
-      user:e.target.value
+      val:e.target.value
     })
   }
+  changeEmail=(e)=>{
+    this.setState({
+      email:e.targrt.value
+    })
+  }
+  // onhandleSignup=(e)=>{
+  //   const {signval}=this.state
+  //   const sign=store.dispatch({type:'ADD_USER',signval})
+  //   console.log(sign);
+  //   // axios.post('http://localhost:3008/signup',signup).then(
+  //   //   res=>{
+  //   //     signup:res.data
+  //   //   }
+  //   // )
+  // }
   render(){
-    const {user} =this.state
     return(
       <div className="sign">
         <Menu/>
-      <div className="signup-header">
+        <div className="signup-header">
           <p>注册</p>
         </div>
         <div className="signup-title">
@@ -25,13 +42,13 @@ class Signup extends Component {
         </div>
         <div className="signup-form">
           <div className="signup-input">
-            <input className='uesrname' type="text" placeholder='用户名' onChange={this.changeUser} value={user}/>
-            <input className='email' type="text" placeholder='Email'/>
+            <input className='uesrname' type="text" placeholder='用户名' onChange={this.changeUser} value={this.state.val}/>
+          <input className='email' type="text" placeholder='Email' onChange={this.changeEmail} value={this.state.email}/>
             <input className='password' type="password" placeholder='password'/>
           <input className='true' type="password" placeholder='再输一遍'/>
           </div>
           <div className="signup-button">
-            <Link className='signup-submit' to='/profile'>注册</Link>
+            <Link onClick={this.onhandleSignup} className='signup-submit' to='/profile'>注册</Link>
           </div>
         </div>
         <div className="signup-other">

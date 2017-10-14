@@ -70,3 +70,23 @@
   background-color: #F9FAFB;
   box-sizing: border-box;
 }
+.new-info{
+  min-height: 300px;
+  background-color: #F9FAFB;
+  margin-top: 80px;
+  padding: 10px;
+}
+.new-img-wrap{
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: -80px;
+  height: 200px;
+  width: 230px;
+  padding: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.25);
+}
+.new-img-wrap img{
+  display: block;
+  height: 200px;
+  width: 230px;
+}
