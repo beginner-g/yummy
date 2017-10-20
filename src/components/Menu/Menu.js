@@ -50,8 +50,8 @@ class Menu extends Component {
                 </div>
               </div>
               <div className="left-list">
-                <Link className='list-button' to='/'>首页</Link>
-                <Link onClick={this.handleLogin} className='list-button' to='/login'>登录</Link>
+                <Link className='list-button' to='/news'>首页</Link>
+              <Link onClick={this.handleLogin} className='list-button' to='/profile'>个人中心</Link>
                 <Link className='list-button' to='/dishes'>猜你喜欢</Link>
               </div>
               <div className="bottom-button">

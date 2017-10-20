@@ -4,31 +4,69 @@ import Menu from '../Menu/Menu'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 import store from '../../redux/store'
+import { message, Button } from 'antd';
 class Signup extends Component {
   state={
-    val:'',
-    email: ''
+    username:'',
+    email: '',
+    password:'',
+    passTrue:''
   }
   changeUser=(e)=>{
     this.setState({
-      val:e.target.value
+      username:e.target.value
     })
   }
   changeEmail=(e)=>{
     this.setState({
-      email:e.targrt.value
+      email:e.target.value
     })
   }
-  // onhandleSignup=(e)=>{
-  //   const {signval}=this.state
-  //   const sign=store.dispatch({type:'ADD_USER',signval})
-  //   console.log(sign);
-  //   // axios.post('http://localhost:3008/signup',signup).then(
-  //   //   res=>{
-  //   //     signup:res.data
-  //   //   }
-  //   // )
-  // }
+  changePass=(e)=>{
+    this.setState({
+      password:e.target.value
+    })
+  }
+  changeTrue=(e)=>{
+    this.setState({
+      passTrue:e.target.value
+    })
+  }
+  onhandleSignup=(e)=>{
+    const data={
+      username:this.state.username,
+      email:this.state.email,
+      password:this.state.password,
+      passTrue:this.state.passTrue
+    }
+    e.preventDefault()
+    if(this.state.username.trim()
+       &&this.state.email.trim()
+       &&this.state.password.trim()
+       &&this.state.passTrue.trim()){
+      if(data.passTrue!==data.password){
+        return message.error('密码不一致，请重新确认');
+        axios.get('http://localhost:3008/signup').then(
+          res=>{
+            if(res.data.find(t=>t.username==data.username))
+            return message.error('用户名已被注册');
+          }
+        )
+      }else{
+        axios.post('http://localhost:3008/signup',data).then(
+          res=>{
+            const sign=res.data
+            console.log(sign.username)
+            store.dispatch({type:'SIGNDATA',username:sign.username})
+          }
+        )
+        window.localStorage.setItem('userId', '23432ddds2')
+        this.props.history.push('/news')
+      }
+    }else{
+      message.error('请填写全部信息');
+    }
+  }
   render(){
     return(
       <div className="sign">
@@ -42,10 +80,10 @@ class Signup extends Component {
         </div>
         <div className="signup-form">
           <div className="signup-input">
-            <input className='uesrname' type="text" placeholder='用户名' onChange={this.changeUser} value={this.state.val}/>
-          <input className='email' type="text" placeholder='Email' onChange={this.changeEmail} value={this.state.email}/>
-            <input className='password' type="password" placeholder='password'/>
-          <input className='true' type="password" placeholder='再输一遍'/>
+            <input className='uesrname' type="text" placeholder='用户名' onChange={this.changeUser} value={this.state.username}/>
+            <input className='email' type="text" placeholder='Email' onChange={this.changeEmail} value={this.state.email}/>
+            <input className='password' type="password" placeholder='password' onChange={this.changePass}/>
+            <input className='true' type="password" placeholder='再输一遍' onChange={this.changeTrue}/>
           </div>
           <div className="signup-button">
             <Link onClick={this.onhandleSignup} className='signup-submit' to='/profile'>注册</Link>

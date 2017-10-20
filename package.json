@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://beginner-g.github.io/yummy",
   "dependencies": {
+    "antd": "^2.13.6",
     "axios": "^0.16.2",
     "gh-pages": "^1.0.0",
     "i": "^0.3.6",

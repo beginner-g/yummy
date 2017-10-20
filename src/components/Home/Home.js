@@ -8,7 +8,7 @@ class Home extends Component {
       <div className="home">
         <div className="yummy">
           <img className='logo' src={img} alt=""/>
-          <h1 className='title'>吮指</h1>
+        <h1 className='title-yummy'>吮指</h1>
           <p>享受舌尖艳遇</p>
         </div>
         <div className="active1">

@@ -4,10 +4,9 @@ const initStore=[
 ]
 const rootReducer=(state=initStore,action)=>{
   switch(action.type){
-    case 'ADD_USER':
-      return [...state,
-            {user:action.signval.val}
-          ]
+    case 'SIGNDATA':
+    // console.log([...state,action.sign]);
+      return [...state,action.username]
     default:
       return state
   }

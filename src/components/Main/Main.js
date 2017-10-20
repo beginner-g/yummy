@@ -5,6 +5,7 @@ import Signup from '../Signup/Signup'
 import Profile from '../Profile/Profile'
 import Dishes from '../Dishes/Dishes'
 import NewDish from '../NewDish/NewDish'
+import News from '../News/News'
 import {Route,Switch} from 'react-router-dom'
 class Main extends Component {
   render(){
@@ -17,6 +18,7 @@ class Main extends Component {
           <Route path='/profile' component={Profile}/>
           <Route exact path='/dishes/:id' component={NewDish}/>
           <Route path='/dishes' component={Dishes}/>
+        <Route path='/news' component={News}/>
         </Switch>
       </div>
     )

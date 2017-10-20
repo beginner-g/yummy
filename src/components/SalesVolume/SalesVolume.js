@@ -10,11 +10,13 @@ class SalesVolume extends Component {
       {name: '6月', amount: 200},
       {name: '7月', amount: 278}
 ];
+const width =window.innerWidth-40
+console.log(width);
     return(
       <div className="sales-volume">
         <h1 className='sales-title'>销售额</h1>
         <p className="sales-detail">单位：份</p>
-      <AreaChart width={880} height={200} data={data} syncId="anyId"
+      <AreaChart width={width} height={200} data={data} syncId="anyId"
             margin={{top: 10, right: 30, left: 0, bottom: 0}}>
           <XAxis dataKey="name"/>
           <YAxis/>

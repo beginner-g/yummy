@@ -9,10 +9,11 @@
   width: 120px;
   display: block;
 }
-.title{
+.title-yummy{
   font-size: 40px;
   text-align: center;
   margin: 0;
+  color: #fff;
 }
 .yummy p{
   font-size: 18px;
@@ -21,7 +22,8 @@
 .active1{
   display: flex;
   justify-content: space-around;
-  padding: 88px 0;
+  padding: 88px 0px;
+  margin: 0 20px;
 }
 .login,.signup{
   display: block;
