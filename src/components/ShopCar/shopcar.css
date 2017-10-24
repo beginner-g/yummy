@@ -1,0 +1,30 @@
+.shop-car1{
+  display: block;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-decoration: none;
+}
+.shop-car1 img{
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.cart_no{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: #212121;
+  text-align: center;
+  line-height: 17px;
+  color: #fff;
+}

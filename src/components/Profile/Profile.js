@@ -3,11 +3,12 @@ import './profile.css'
 import pen from './pen.svg'
 import List from '../List/List'
 import Menu from '../Menu/Menu'
+import axios from 'axios'
 class Profile extends Component {
   state={
     val:'',
-    word:'个性签名'
-
+    word:'个性签名',
+    username:''
   }
   handleChange=(e)=>{
     this.setState({
@@ -27,8 +28,19 @@ class Profile extends Component {
       word:''
     })
   }
+  componentDidMount(){
+    axios.get('http://localhost:3008/login').then(
+      res=>{
+        res.data.map(t=>{
+          this.setState({
+            username:t.username
+          })
+        })
+      }
+    )
+  }
   render(){
-    const {val,word}=this.state
+    const {val,word,username}=this.state
     console.log(this.state.word)
     return(
       <div className="profile-title">
@@ -42,7 +54,7 @@ class Profile extends Component {
           </label>
           <div className="profile-username">
             <div className="pro-username">
-              Beginner
+              {username}
             </div>
             <div className={`pro-slogan ${word&&'active'}`}>
               <input className='word' type="text" value={val} onChange={this.handleChange}/>

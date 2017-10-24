@@ -6,9 +6,7 @@
       "title": "云石芝士蛋糕",
       "price": 12,
       "desc": "好吃",
-      "completed": true,
-      "buy": false,
-      "num": 0
+      "completed": true
     },
     {
       "id": 3,
@@ -16,9 +14,7 @@
       "title": "绿茶布朗尼蛋糕",
       "price": 12,
       "desc": "好吃",
-      "completed": true,
-      "buy": false,
-      "num": 0
+      "completed": true
     },
     {
       "title": "小蛋糕",
@@ -26,9 +22,7 @@
       "price": "10",
       "imgurl": "http://e.hiphotos.baidu.com/image/pic/item/d52a2834349b033b5f82811a1cce36d3d439bde3.jpg",
       "id": 4,
-      "completed": true,
-      "buy": false,
-      "num": 0
+      "completed": true
     }
   ],
   "dishes": [
@@ -37,44 +31,92 @@
       "goods": "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3463154630,851888036&fm=27&gp=0.jpg",
       "title": "黑森林",
       "price": 12,
-      "desc": "好吃"
+      "desc": "好吃",
+      "num": 0
     },
     {
       "title": "芝士",
       "desc": "不错",
       "price": "34",
       "goods": "http://e.hiphotos.baidu.com/image/pic/item/d52a2834349b033b5f82811a1cce36d3d439bde3.jpg",
-      "id": 4
+      "id": 4,
+      "num": 0
     },
     {
       "title": "抹茶蛋糕",
       "desc": "yummy",
       "price": "45",
       "goods": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1507389142300&di=a4cb1514bfaae4df7b5a81bae9a28429&imgtype=0&src=http%3A%2F%2Fcdn.duitang.com%2Fuploads%2Fitem%2F201602%2F04%2F20160204104543_jEChL.jpeg",
-      "id": 5
+      "id": 5,
+      "num": 0
     }
   ],
   "signup": [
     {
-      "username": "1",
+      "username": "beginner",
       "email": "1",
-      "password": "1",
-      "passTrue": "1",
+      "password": "beginner",
+      "passTrue": "beginner",
+      "id": 1
+    },
+    {
+      "username": "969925523",
+      "email": "1",
+      "password": "969925523",
+      "passTrue": "969925523",
+      "id": 2
+    }
+  ],
+  "login": [
+    {
+      "username": "beginner",
+      "password": "beginner",
       "id": 1
     },
     {
       "username": "beginner",
-      "email": "1",
-      "password": "13383356368",
-      "passTrue": "13383356368",
+      "password": "beginner",
       "id": 2
     },
     {
       "username": "beginner",
-      "email": "1",
-      "password": "1",
-      "passTrue": "1",
+      "password": "beginner",
       "id": 3
+    },
+    {
+      "username": "beginner",
+      "password": "beginner",
+      "id": 4
+    },
+    {
+      "username": "beginner",
+      "password": "beginner",
+      "id": 5
+    },
+    {
+      "username": "beginner",
+      "password": "beginner",
+      "id": 6
+    },
+    {
+      "username": "beginner",
+      "password": "beginner",
+      "id": 7
+    },
+    {
+      "username": "969925523",
+      "password": "969925523",
+      "id": 8
+    },
+    {
+      "username": "beginner",
+      "password": "beginner",
+      "id": 9
+    },
+    {
+      "username": "beginner",
+      "password": "beginner",
+      "id": 10
     }
   ]
 }

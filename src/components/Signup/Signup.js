@@ -3,8 +3,8 @@ import './signup.css'
 import Menu from '../Menu/Menu'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
-import store from '../../redux/store'
-import { message, Button } from 'antd';
+import store from "../../redux/store"
+import { message } from 'antd';
 class Signup extends Component {
   state={
     username:'',
@@ -46,22 +46,13 @@ class Signup extends Component {
        &&this.state.passTrue.trim()){
       if(data.passTrue!==data.password){
         return message.error('密码不一致，请重新确认');
-        axios.get('http://localhost:3008/signup').then(
-          res=>{
-            if(res.data.find(t=>t.username==data.username))
+        if(store.getState().data.find(t=>t.username==data.username))
             return message.error('用户名已被注册');
-          }
-        )
       }else{
-        axios.post('http://localhost:3008/signup',data).then(
-          res=>{
-            const sign=res.data
-            console.log(sign.username)
-            store.dispatch({type:'SIGNDATA',username:sign.username})
-          }
-        )
+        store.dispatch({type:'SIGNDATA',data})
+        console.log(store.getState());
         window.localStorage.setItem('userId', '23432ddds2')
-        this.props.history.push('/news')
+        this.props.history.push('/login')
       }
     }else{
       message.error('请填写全部信息');

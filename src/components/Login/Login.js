@@ -2,7 +2,48 @@ import React, { Component } from 'react'
 import './login.css'
 import {Link} from 'react-router-dom'
 import Menu from '../Menu/Menu'
+import { message } from 'antd';
+import axios from 'axios'
+import store from "../../redux/store"
+
 class Login extends Component {
+  state={
+    username:'',
+    password:''
+  }
+  changeUser=(e)=>{
+    this.setState({
+      username:e.target.value
+    })
+  }
+  changePass=(e)=>{
+    this.setState({
+      password:e.target.value
+    })
+  }
+  login=(e)=>{
+    e.preventDefault()
+    const data={
+      username:this.state.username,
+      password:this.state.password
+    }
+    if(this.state.username === ''){
+
+      console.log(store.getState().signform);
+    return message.error('用户名不能为空')
+    }
+      const news= store.getState().signform.filter(t=>t.username===data.username&&t.password===data.password)
+        if(news==false){
+          return message.error('用户名或密码不正确')
+        }else{
+          const login= this.state.username
+          console.log(login);
+          store.dispatch({type:'LOGIN',login})
+          localStorage.setItem('userId', '23432ddds2')
+          this.props.history.push('/news')
+        }
+
+  }
   render(){
     return(
       <div className="login-home">
@@ -16,11 +57,11 @@ class Login extends Component {
         </div>
         <div className="login-form">
           <div className="input">
-            <input className='uesrname' type="text" placeholder='用户名'/>
-            <input className='password' type="password" placeholder='password'/>
+            <input onChange={this.changeUser} value={this.state.username} className='uesrname' type="text" placeholder='用户名'/>
+          <input onChange={this.changePass} value={this.state.password} className='password' type="password" placeholder='password'/>
           </div>
           <div className="login-button">
-            <Link className='submit' to='/profile'>登录</Link>
+            <Link className='submit' to='/profile' onClick={this.login}>登录</Link>
           </div>
         </div>
         <div className="other">

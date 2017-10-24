@@ -14,7 +14,6 @@ class Dishes extends Component {
   componentDidMount(){
     axios.get('http://localhost:3008/dishes').then(
       res=>{
-        console.log(res.data)
         this.setState({
           dish:res.data
         })

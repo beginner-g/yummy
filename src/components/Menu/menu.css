@@ -59,6 +59,7 @@
 .user-login{
   display: block;
   margin: 16px auto;
+  display: flex;
 }
 .user-login a{
   padding-left: 5px;
@@ -67,6 +68,14 @@
   text-align: center;
   line-height: 1;
   text-decoration: none;
+}
+.logout{
+    color: #F77062;
+    margin-left: 5px;
+    line-height: 1;
+}
+.logout-active{
+  display: none;
 }
 .user-name{
   display: inline-block;
