@@ -4,6 +4,7 @@ import pen from './pen.svg'
 import List from '../List/List'
 import Menu from '../Menu/Menu'
 import axios from 'axios'
+import store from '../../redux/store'
 class Profile extends Component {
   state={
     val:'',
@@ -38,6 +39,11 @@ class Profile extends Component {
         })
       }
     )
+    // store.getState().loginform.map(t=>{
+    //   this.setState({
+    //     username:t.username
+    //   })
+    // })
   }
   render(){
     const {val,word,username}=this.state

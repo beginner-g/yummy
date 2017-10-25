@@ -53,70 +53,40 @@
   ],
   "signup": [
     {
-      "username": "beginner",
+      "username": "1",
       "email": "1",
-      "password": "beginner",
-      "passTrue": "beginner",
+      "password": "1",
+      "passTrue": "1",
       "id": 1
     },
     {
-      "username": "969925523",
-      "email": "1",
-      "password": "969925523",
-      "passTrue": "969925523",
+      "username": "dal",
+      "email": "ao",
+      "password": "az",
+      "passTrue": "az",
       "id": 2
     }
   ],
   "login": [
     {
-      "username": "beginner",
-      "password": "beginner",
+      "username": "1",
+      "password": "1",
       "id": 1
     },
     {
-      "username": "beginner",
-      "password": "beginner",
+      "username": "1",
+      "password": "1",
       "id": 2
     },
     {
-      "username": "beginner",
-      "password": "beginner",
+      "username": "dal",
+      "password": "az",
       "id": 3
     },
     {
-      "username": "beginner",
-      "password": "beginner",
+      "username": "dal",
+      "password": "az",
       "id": 4
-    },
-    {
-      "username": "beginner",
-      "password": "beginner",
-      "id": 5
-    },
-    {
-      "username": "beginner",
-      "password": "beginner",
-      "id": 6
-    },
-    {
-      "username": "beginner",
-      "password": "beginner",
-      "id": 7
-    },
-    {
-      "username": "969925523",
-      "password": "969925523",
-      "id": 8
-    },
-    {
-      "username": "beginner",
-      "password": "beginner",
-      "id": 9
-    },
-    {
-      "username": "beginner",
-      "password": "beginner",
-      "id": 10
     }
   ]
 }

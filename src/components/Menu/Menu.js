@@ -36,12 +36,16 @@ class Menu extends Component {
     })
   }
   componentDidMount(){
-     store.getState().loginform.map(t=>{
-        this.setState({
-          username:t.username
+    axios.get('http://localhost:3008/login').then(
+      res=>{
+        res.data.map(t=>{
+          this.setState({
+            username:t.username
+          })
+          console.log(t.username);
         })
-     })
-     console.log(store.getState().loginform);
+      }
+    )
   }
   logout=(e)=>{
     window.localStorage.removeItem('userId')

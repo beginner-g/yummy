@@ -30,7 +30,7 @@ class Main extends Component {
           <Route path='/news' component={News}/>
         <Route path='/shopresult' component={ShopResult}/>
         </Switch>
-        {store.getState().data.length!=0&&<ShopCar/>}
+        {store.getState().data.length!==0&&<ShopCar/>}
       </div>
     )
   }

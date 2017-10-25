@@ -49,7 +49,12 @@ class Signup extends Component {
         if(store.getState().data.find(t=>t.username==data.username))
             return message.error('用户名已被注册');
       }else{
-        store.dispatch({type:'SIGNDATA',data})
+        axios.post('http://localhost:3008/signup',data).then(
+          res=>{
+              const data=res.data
+              store.dispatch({type:'SIGNDATA',data})
+          }
+        )
         console.log(store.getState());
         window.localStorage.setItem('userId', '23432ddds2')
         this.props.history.push('/login')

@@ -10,8 +10,8 @@ const rootReducer=(state=initState,action)=>{
     case 'SIGNDATA':
       return {...state,signform:[...state.signform,action.data]}
     case 'LOGIN':
-    console.log({...state,loginform:[...state.loginform,{username:action.login}]});
-      return {...state,loginform:[...state.loginform,{username:action.login}]}
+    console.log({...state,loginform:[...state.loginform,{username:action.data}]});
+      return {...state,loginform:[...state.loginform,{username:action.data}]}
     case 'UPDATA_DATA':
     // console.log(action.data);
       return {...state,data:[...state.data,action.data]}

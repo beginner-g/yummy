@@ -28,17 +28,23 @@ class Login extends Component {
       password:this.state.password
     }
     if(this.state.username === ''){
-
-      console.log(store.getState().signform);
-    return message.error('用户名不能为空')
+      return message.error('用户名不能为空')
     }
-      const news= store.getState().signform.filter(t=>t.username===data.username&&t.password===data.password)
+      const news=axios.get('http://localhost:3008/signup').then(
+        res=>{
+          res.data.filter(t=>t.username===data.username&&t.password===data.password)
+        }
+      )
         if(news==false){
           return message.error('用户名或密码不正确')
         }else{
-          const login= this.state.username
-          console.log(login);
-          store.dispatch({type:'LOGIN',login})
+          axios.post('http://localhost:3008/login',data).then(
+            res=>{
+              const data =res.data
+              store.dispatch({type:'LOGIN',data})
+            }
+          )
+          console.log(store.getState().loginform);
           localStorage.setItem('userId', '23432ddds2')
           this.props.history.push('/news')
         }
