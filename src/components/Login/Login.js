@@ -30,25 +30,25 @@ class Login extends Component {
     if(this.state.username === ''){
       return message.error('用户名不能为空')
     }
-      const news=axios.get('http://localhost:3008/signup').then(
+      axios.get('http://localhost:3008/signup').then(
         res=>{
-          res.data.filter(t=>t.username===data.username&&t.password===data.password)
+          const news=res.data.filter(t=>t.username===data.username&&t.password===data.password)
+          console.log(res.data.filter(t=>t.username===data.username&&t.password===data.password));
+          if(news==false){
+            return message.error('用户名或密码不正确')
+          }else{
+            axios.post('http://localhost:3008/login',data).then(
+              res=>{
+                const data =res.data
+                store.dispatch({type:'LOGIN',data})
+              }
+            )
+            console.log(store.getState().loginform);
+            localStorage.setItem('userId', '23432ddds2')
+            this.props.history.push('/news')
+          }
         }
       )
-        if(news==false){
-          return message.error('用户名或密码不正确')
-        }else{
-          axios.post('http://localhost:3008/login',data).then(
-            res=>{
-              const data =res.data
-              store.dispatch({type:'LOGIN',data})
-            }
-          )
-          console.log(store.getState().loginform);
-          localStorage.setItem('userId', '23432ddds2')
-          this.props.history.push('/news')
-        }
-
   }
   render(){
     return(

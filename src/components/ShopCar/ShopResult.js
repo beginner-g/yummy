@@ -27,6 +27,7 @@ class ShopResult extends Component {
 }
 result=()=>{
   store.dispatch({type:'DELETE_DATA'})
+  alert('欢迎下次购物')
   this.props.history.push('/news')
 }
   render(){

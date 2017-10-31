@@ -35,8 +35,13 @@ class NewDish extends Component {
     const {data} =this.state
     const datas =store.getState().data
     console.log(datas);
-    if(!datas.find(t=>t.id==id)){
-      store.dispatch({type:'UPDATA_DATA',data})
+    if(window.localStorage.getItem('userId')){
+      if(!datas.find(t=>t.id==id)){
+        store.dispatch({type:'UPDATA_DATA',data})
+      }
+    }else{
+      alert('请先登录')
+      this.props.history.push('/login')
     }
   }
   render(){

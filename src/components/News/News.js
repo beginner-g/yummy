@@ -31,12 +31,12 @@ class News extends Component {
           暂无好友更新，可以直接去 <Link to='/dishes'>购物区</Link> 转转。
         </div>
       </div>
-      <div className={`wrap-box ${show&&'box-active'}`}>
+      {/* <div className={`wrap-box ${show&&'box-active'}`}>
         <div className="box">
           <p>欢迎继续购物</p>
           <p className='clearbox' onClick={this.handleClear}>关闭</p>
         </div>
-      </div>
+      </div> */}
       </div>
     )
   }
